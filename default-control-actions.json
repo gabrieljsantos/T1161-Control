@@ -1,0 +1,17 @@
+{
+  "tablet-1": {"normal": "open-screen-profiles", "menu": "none"},
+  "tablet-2": {"normal": "open-input-profiles", "menu": "none"},
+  "tablet-3": {"normal": "none", "menu": "previous"},
+  "tablet-4": {"normal": "none", "menu": "next"},
+  "tablet-5": {"normal": "none", "menu": "confirm"},
+  "tablet-6": {"normal": "none", "menu": "none"},
+  "tablet-7": {"normal": "none", "menu": "none"},
+  "tablet-8": {"normal": "none", "menu": "none"},
+  "tablet-9": {"normal": "none", "menu": "none"},
+  "tablet-10": {"normal": "none", "menu": "none"},
+  "tablet-11": {"normal": "none", "menu": "none"},
+  "tablet-12": {"normal": "none", "menu": "none"},
+  "pen-04": {"normal": "right", "menu": "none"},
+  "pen-06": {"normal": "middle", "menu": "none"},
+  "tip": {"normal": "left", "menu": "none"}
+}

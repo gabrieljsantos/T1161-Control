@@ -1,0 +1,31 @@
+--- home/heisenberg0x01/.local/bin/t1161-control
++++ home/heisenberg0x01/.local/bin/t1161-control
+@@ -177,6 +177,7 @@
+         config_menu = Gio.Menu()
+         config_menu.append("Telas e movimento", "win.open-settings")
+         config_menu.append("Ponteiro e pressão", "win.open-settings")
++        config_menu.append("Perfis de área e telas", "win.open-profiles")
+         config_button = Gtk.MenuButton(label="Configurações", menu_model=config_menu)
+         header.pack_start(config_button)
+ 
+@@ -189,6 +190,9 @@
+         settings_action = Gio.SimpleAction.new("open-settings", None)
+         settings_action.connect("activate", self.open_settings)
+         self.add_action(settings_action)
++        profiles_action = Gio.SimpleAction.new("open-profiles", None)
++        profiles_action.connect("activate", self.open_profiles)
++        self.add_action(profiles_action)
+         mapping_action = Gio.SimpleAction.new("map-buttons", None)
+         mapping_action.connect("activate", lambda *_args: self.start_mapping(None))
+         self.add_action(mapping_action)
+@@ -235,6 +239,12 @@
+         self.calibrated_maximum = None
+ 
++    def open_profiles(self, *_args):
++        try:
++            Gio.Subprocess.new(["t1161-profile-manager"], Gio.SubprocessFlags.NONE)
++        except GLib.Error as error:
++            self.map_status.set_text(f"Não foi possível abrir os perfis: {error.message}")
++
+     def reload_pressure_settings(self):
+         self.pressure_click, self.pressure_maximum, _, _ = load_pressure_settings()

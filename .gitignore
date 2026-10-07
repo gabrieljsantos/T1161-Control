@@ -1,0 +1,29 @@
+# Materiais internos usados apenas como referência
+pix-doacao-framework/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Rust
+driver/target/
+
+# Capturas, telemetria e arquivos gerados em execução
+usb-capture.txt
+active-control-actions.runtime
+*.log
+*.tsv
+
+# Editores e sistema operacional
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db

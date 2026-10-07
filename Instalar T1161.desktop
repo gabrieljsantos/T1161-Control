@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Instalar MT500–T1161 Linux Graphics Tablet Driver
+Comment=Compila, instala e reinicia o driver da ZINNIA MOMENTUM MT500 (T1161)
+Exec="/run/media/heisenberg0x01/SSD Kingston/PROJECTS/T1161 Control/install.sh"
+Icon=input-tablet
+Terminal=true
+Categories=Settings;HardwareSettings;
+StartupNotify=true

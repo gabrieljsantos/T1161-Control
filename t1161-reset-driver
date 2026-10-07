@@ -1,0 +1,18 @@
+#!/bin/sh
+
+set -eu
+
+service=t1161-driver.service
+
+# Garante que o serviço volte mesmo se o reset USB falhar ou for interrompido.
+systemctl stop "$service"
+trap 'systemctl restart "$service"' EXIT HUP INT TERM
+
+if command -v usbreset >/dev/null 2>&1; then
+    usbreset 08f2:6811 || true
+    sleep 1
+fi
+
+systemctl start "$service"
+trap - EXIT HUP INT TERM
+systemctl is-active --quiet "$service"

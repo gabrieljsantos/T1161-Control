@@ -1,0 +1,54 @@
+--- home/heisenberg0x01/.local/bin/t1161-control
++++ home/heisenberg0x01/.local/bin/t1161-control
+@@ -209,9 +209,9 @@
+         title.add_css_class("title-2")
+         root.append(title)
+         root.append(Gtk.Label(
+-            label=("A borda contínua é a área paisagem confirmada. A borda tracejada "
+-                   "é apenas uma referência da região retrato sobreposta; seus limites "
+-                   "eletrônicos ainda não foram medidos."), xalign=0, wrap=True))
++            label=("Referência de captura no computador: 254 × 152 mm (10 × 6 pol.). "
++                   "A área completa confirmada da T1161 é 300 × 188 mm; o preset "
++                   "Wacom One usa 152 × 95 mm."), xalign=0, wrap=True))
+         self.canvas = Gtk.DrawingArea()
+         self.canvas.set_content_width(850); self.canvas.set_content_height(450)
+         self.canvas.set_vexpand(True)
+@@ -280,7 +280,9 @@
+                     self.button_baseline = fields[5]
+                 x, y, pressure, touching, pen, tablet = self.state
++                x_mm, y_mm = x * 300 / 4095, y * 188 / 4095
+                 self.readout.set_text(
+-                    f"X {x:4d}   Y {y:4d}   Pressão {pressure:4d}   "
+-                    f"Ponta {'encostada' if touching else 'em proximidade'}   "
++                    f"Posição {x_mm:5.1f} × {y_mm:5.1f} mm   "
++                    f"(X {x:4d}, Y {y:4d})   Pressão {pressure:4d}   "
++                    f"Ponta {'encostada' if touching else 'em proximidade'}   "
+                     f"Caneta 0x{pen:02x}   Botões brutos 0x{tablet:04x}"
+                 )
+@@ -398,11 +400,20 @@
+         ctx.set_source_rgb(0.30, 0.72, 1.0); ctx.set_line_width(3); ctx.rectangle(x0,y0,landscape_w,landscape_h); ctx.stroke()
+         ctx.set_font_size(15); ctx.move_to(x0+12,y0+24); ctx.show_text("Paisagem — área confirmada 300 × 188 mm")
+ 
+-        # Referência geométrica, não tratada como um segundo endereço/protocolo.
+-        portrait_h = landscape_h*0.88; portrait_w = portrait_h*(188/300)
+-        px = x0+(landscape_w-portrait_w)/2; py = y0+(landscape_h-portrait_h)/2
+-        ctx.set_dash([9,7]); ctx.set_source_rgba(1.0,0.65,0.20,0.9); ctx.set_line_width(2)
+-        ctx.rectangle(px,py,portrait_w,portrait_h); ctx.stroke(); ctx.set_dash([])
+-        ctx.set_font_size(13); ctx.move_to(px+8,py+20); ctx.show_text("Retrato — referência")
++        # Presets físicos usados pelo gerador de perfis.
++        pc_w, pc_h = landscape_w*(254/300), landscape_h*(152/188)
++        pc_x, pc_y = x0+(landscape_w-pc_w)/2, y0+(landscape_h-pc_h)/2
++        ctx.set_dash([9,7]); ctx.set_source_rgba(0.35,0.85,0.55,0.95); ctx.set_line_width(2)
++        ctx.rectangle(pc_x,pc_y,pc_w,pc_h); ctx.stroke(); ctx.set_dash([])
++        ctx.set_font_size(13); ctx.move_to(pc_x+10,pc_y+22)
++        ctx.show_text("Computador — 254 × 152 mm / 10 × 6 pol.")
++
++        wacom_w, wacom_h = landscape_w*(152/300), landscape_h*(95/188)
++        wacom_x = x0+(landscape_w-wacom_w)/2
++        wacom_y = y0+(landscape_h-wacom_h)/2
++        ctx.set_source_rgba(1.0,0.65,0.20,0.95); ctx.set_line_width(2)
++        ctx.rectangle(wacom_x,wacom_y,wacom_w,wacom_h); ctx.stroke()
++        ctx.set_font_size(13); ctx.move_to(wacom_x+10,wacom_y+22)
++        ctx.show_text("Wacom One — 152 × 95 mm")
+ 
+         # Um único marcador: os relatórios observados fornecem um único par X/Y.

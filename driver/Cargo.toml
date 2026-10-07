@@ -1,0 +1,9 @@
+[package]
+name = "t1161-diagnostic"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+evdev = "0.12.1"
+rusb = "0.9.3"
+signal-hook = "0.3.17"

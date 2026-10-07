@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=T1161 Actions
+Comment=Executa as ações configuradas para os botões da mesa T1161
+Exec=t1161-actions --background
+Icon=input-tablet
+Terminal=false
+NoDisplay=true
+X-GNOME-Autostart-enabled=true

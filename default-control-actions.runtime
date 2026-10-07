@@ -1,0 +1,41 @@
+touch-spacing 180
+direction-threshold 20
+tablet-1 open-screen-profiles
+tablet-2 open-input-profiles
+tablet-3 none
+tablet-4 none
+tablet-5 none
+tablet-6 none
+tablet-7 none
+tablet-8 none
+tablet-9 none
+tablet-10 none
+tablet-11 none
+tablet-12 none
+pen-04 right
+pen-06 middle
+tip left
+tablet-bit 7 open-screen-profiles
+tablet-menu-bit 7 none
+tablet-bit 9 open-input-profiles
+tablet-menu-bit 9 none
+tablet-bit 13 none
+tablet-menu-bit 13 previous
+tablet-bit 12 none
+tablet-menu-bit 12 next
+tablet-bit 8 none
+tablet-menu-bit 8 confirm
+tablet-bit 6 none
+tablet-menu-bit 6 none
+tablet-bit 4 none
+tablet-menu-bit 4 none
+tablet-bit 2 none
+tablet-menu-bit 2 none
+tablet-bit 3 none
+tablet-menu-bit 3 none
+tablet-bit 0 none
+tablet-menu-bit 0 none
+tablet-bit 1 none
+tablet-menu-bit 1 none
+tablet-bit 5 none
+tablet-menu-bit 5 none

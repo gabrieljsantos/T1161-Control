@@ -1,0 +1,7 @@
+{
+  "uuid": "t1161-pointer-sync@local",
+  "name": "T1161 Pointer Sync",
+  "description": "Mantém o cursor global na posição absoluta da caneta T1161.",
+  "shell-version": ["50"],
+  "version": 2
+}

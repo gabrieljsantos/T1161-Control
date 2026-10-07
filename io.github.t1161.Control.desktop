@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=MT500–T1161 Linux Graphics Tablet Driver
+Comment=Configurar a mesa ZINNIA MOMENTUM MT500 (T1161)
+Exec=t1161-control
+Icon=input-tablet
+Terminal=false
+Categories=Settings;HardwareSettings;
+StartupNotify=true
+StartupWMClass=io.github.t1161.Control
