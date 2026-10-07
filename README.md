@@ -53,6 +53,76 @@ Perfis com uma zona em 0° ou 180° funcionam no mecanismo atual. Perfis com
 regiões independentes para várias telas podem ser salvos e editados, mas o
 driver atual não executa esse mapeamento multizona.
 
+## Interface gráfica
+
+### Painel principal
+
+O painel centraliza o estado da mesa e o acesso às configurações do driver.
+
+<p align="center">
+  <img
+    src="assets/screenshots/painel-principal.png"
+    alt="Painel principal do MT500–T1161 Linux Graphics Tablet Driver"
+    width="760"
+  >
+</p>
+
+### Configuração de perfis
+
+Os editores permitem definir as ações dos controles e associar a área da mesa
+às telas conectadas.
+
+<table>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <img
+        src="assets/screenshots/configuracao-perfil-acoes.png"
+        alt="Configuração de perfil de ações"
+        width="440"
+      >
+      <br>
+      <strong>Perfil de ações</strong>
+    </td>
+    <td width="50%" align="center" valign="top">
+      <img
+        src="assets/screenshots/configuracao-telas.png"
+        alt="Definição e configuração de telas"
+        width="440"
+      >
+      <br>
+      <strong>Perfis de área e telas</strong>
+    </td>
+  </tr>
+</table>
+
+### Seletores rápidos
+
+Os pop-ups permitem alternar os perfis de ações e de tela sem abrir o editor
+completo.
+
+<table>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <img
+        src="assets/screenshots/seletor-perfil-acoes.png"
+        alt="Seletor rápido de perfil de ações"
+        width="440"
+      >
+      <br>
+      <strong>Seletor de perfil de ações</strong>
+    </td>
+    <td width="50%" align="center" valign="top">
+      <img
+        src="assets/screenshots/seletor-perfil-tela.png"
+        alt="Seletor rápido de perfil de tela"
+        width="440"
+      >
+      <br>
+      <strong>Seletor de perfil de tela</strong>
+    </td>
+  </tr>
+</table>
+
 ## Compatibilidade confirmada
 
 | Nome completo no marketplace | Código completo do produto | Identificação USB | Sistema testado | Estado |
