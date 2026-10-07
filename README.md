@@ -19,15 +19,26 @@ T1161 correspondente.
 
 ## Apoie o projeto
 
-Se este driver foi útil, você pode contribuir voluntariamente via Pix. Escaneie
-o QR Code no aplicativo do seu banco e confirme os dados do recebedor antes de
-concluir.
-
-![QR Code para contribuição voluntária via Pix](assets/pix-qrcode.svg)
-
-- Chave Pix (e-mail): `gabriel3d.com@gmail.com`
-- Recebedor: Gabriel de Jesus Santos
-- Instituição: Nu Pagamentos S.A. – Instituição de Pagamento (Nubank)
+<table>
+  <tr>
+    <td width="240" align="center" valign="middle">
+      <img
+        src="assets/pix-qrcode.svg"
+        alt="QR Code para contribuição voluntária via Pix"
+        width="220"
+      >
+    </td>
+    <td valign="middle">
+      <p>Se este driver foi útil, você pode contribuir voluntariamente via Pix.</p>
+      <p>Escaneie o QR Code no aplicativo do seu banco e confirme os dados do recebedor antes de concluir.</p>
+      <ul>
+        <li><strong>Chave Pix (e-mail):</strong> <code>gabriel3d.com@gmail.com</code></li>
+        <li><strong>Recebedor:</strong> Gabriel de Jesus Santos</li>
+        <li><strong>Instituição:</strong> Nu Pagamentos S.A. – Instituição de Pagamento (Nubank)</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ## Funcionalidades
 
